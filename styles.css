@@ -1,0 +1,147 @@
+/* Importando a fonte Slabo 27px */
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+/* Reset básico e estilos globais */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Slabo 27px', serif;
+    background-color: #1D1A39;
+    position: relative;
+}
+
+/* Estilização do contêiner principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos dos cards de cadastro e listagem */
+.card {
+    background-color: #384358;
+    color: #FFFFFF;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+/* Estilização de títulos dentro dos cards */
+.registration-card h2,
+.list-screen h2 {
+    letter-spacing: 0.81em;
+}
+
+/* Estilos para os inputs e selects */
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: 'Slabo 27px', serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilização geral dos botões */
+button {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: 'Slabo 27px', serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito hover para todos os botões */
+button:hover {
+    background-color: #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilização dos itens de lista na tela de listagem */
+.list-results .item {
+    background-color: #242d3d;
+    border-bottom: 1px solid #28a745;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.list-results .item-details {
+    margin-right: 10px;
+    display: block;
+    /* Elementos empilhados verticalmente */
+}
+
+.list-results .item-details span {
+    display: block;
+    /* Cada span forma uma linha */
+    margin-bottom: 5px;
+    /* Espaçamento entre elementos para clareza */
+}
+
+.list-results .item button {
+    margin-left: 5px;
+}
+
+/* Estilos do rodapé */
+.footer .name-lower-left,
+.footer .university-lower-right {
+    position: absolute;
+    color: white;
+    font-size: 1em;
+    opacity: 0.5;
+    letter-spacing: 0.81em;
+}
+
+.name-lower-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.university-lower-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
