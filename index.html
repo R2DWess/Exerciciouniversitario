@@ -5,65 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Cadastro de Gastos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
-    <style>
-        /* Aplicando a fonte aos elementos desejados */
-        body,
-        h2,
-        button,
-        input,
-        select {
-            font-family: 'Slabo 27px', serif;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- Seção de Cadastro -->
         <div class="card registration-card">
             <h2>CADASTRO</h2>
             <form id="registration-form">
-                <input type="text" id="nome-produto" placeholder="Nome do Produto" required>
-                <input type="number" id="valor-produto" placeholder="Valor" required>
-                <select id="categoria-produto" required>
+                <input type="text" id="nome-gasto" placeholder="Nome do Gasto" required>
+                <input type="number" id="valor-gasto" placeholder="Valor" required>
+                <select id="categoria-gasto" required>
                     <option value="" disabled selected>Escolha a Categoria</option>
                     <option value="Alimentação">Alimentação</option>
                     <option value="Transporte">Transporte</option>
                     <option value="Saúde">Saúde</option>
                 </select>
-                <button type="submit">CADASTRAR</button>
+                <button type="submit">Cadastrar</button>
             </form>
         </div>
 
-        <!-- Seção de Listagem com Filtro por Categoria -->
         <div class="card list-screen">
             <h2>DETALHES</h2>
-            <select id="filtro-categoria" class="input-filter">
-                <option value="">Todas as Categorias</option>
-                <option value="Alimentação">Alimentação</option>
-                <option value="Transporte">Transporte</option>
-                <option value="Saúde">Saúde</option>
-            </select>
-            <button id="btn-filtrar">Filtrar</button>
+            <div>
+                <select id="filtro-categoria">
+                    <option value="">Todas as Categorias</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Saúde">Saúde</option>
+                </select>
+                <button id="btn-filtrar">Filtrar</button>
+            </div>
+            <div>
+                <input type="text" id="busca-termo" placeholder="Buscar por nome ou valor">
+                <select id="busca-tipo">
+                    <option value="nome">Nome</option>
+                    <option value="valor">Valor</option>
+                </select>
+                <button id="btn-buscar">Buscar</button>
+            </div>
             <div class="list-results">
-                <!-- Os produtos filtrados serão listados aqui -->
             </div>
         </div>
     </div>
 
-    <!-- Informações do rodapé -->
     <div class="footer">
-        <div class="name-lower-left">WESLEY FRANCISCO PEREIRA LIMA</div>
+        <div class="name-lower-left">WESLEY LIMA</div>
         <div class="university-lower-right">UNIVERSIDADE CATÓLICA DE BRASÍLIA</div>
     </div>
 
-    <!-- Scripts incluídos no final do corpo para garantir que todo o DOM está carregado -->
-    <script src="Produto.js"></script>
-    <script src="ProdutoManager.js"></script>
-    <script src="UIManager.js"></script>
-    <script src="main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
